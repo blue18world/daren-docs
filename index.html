@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🥛 大人牛乳 — 文件總覽</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; background: #f5f2ee; color: #2c2c2c; min-height: 100vh; padding: 0 0 60px; }
+    header { background: #fff; border-bottom: 1px solid #e8e4df; padding: 28px 48px 24px; display: flex; align-items: baseline; gap: 16px; }
+    header h1 { font-size: 22px; font-weight: 700; letter-spacing: 0.04em; color: #1a1a1a; }
+    header .subtitle { font-size: 13px; color: #999; font-weight: 400; }
+    .date-badge { margin-left: auto; font-size: 12px; color: #aaa; background: #f5f2ee; padding: 4px 10px; border-radius: 20px; }
+    main { max-width: 1160px; margin: 36px auto 0; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+    .section { background: #fff; border-radius: 16px; padding: 22px 24px 20px; border: 1px solid #ece9e4; display: flex; flex-direction: column; gap: 0; }
+    .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid #f0ede8; }
+    .section-icon { width: 34px; height: 34px; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+    .section-title { font-size: 14px; font-weight: 700; letter-spacing: 0.03em; color: #1a1a1a; }
+    .section-count { margin-left: auto; font-size: 11px; color: #bbb; background: #f5f2ee; padding: 2px 8px; border-radius: 10px; }
+    .file-list { display: flex; flex-direction: column; gap: 4px; }
+    .file-row { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 9px; text-decoration: none; color: #333; transition: background 0.15s ease; cursor: pointer; }
+    .file-row:hover { background: #f7f4f0; }
+    .file-row:hover .file-name { color: #000; }
+    .file-type { font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 5px; letter-spacing: 0.04em; flex-shrink: 0; width: 32px; text-align: center; }
+    .type-sheet { background: #e6f4ea; color: #2d8c4e; }
+    .type-doc { background: #e8eeff; color: #3a5bd9; }
+    .file-name { font-size: 13px; font-weight: 500; color: #444; line-height: 1.4; flex: 1; transition: color 0.15s; }
+    .file-arrow { font-size: 12px; color: #ccc; flex-shrink: 0; }
+    .file-row:hover .file-arrow { color: #999; }
+    .cat-ops .section-icon { background: #fff3e0; }
+    .cat-mkt .section-icon { background: #fce4ec; }
+    .cat-event .section-icon { background: #e8f5e9; }
+    .cat-biz .section-icon { background: #e3f2fd; }
+    .cat-fin .section-icon { background: #ede7f6; }
+    .cat-brand .section-icon { background: #fff8e1; }
+    .cat-auto .section-icon { background: #e0f7fa; }
+    footer { text-align: center; margin-top: 48px; font-size: 11px; color: #ccc; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🥛 大人牛乳</h1>
+  <span class="subtitle">公司文件總覽</span>
+  <span class="date-badge">更新於 2026-04-05</span>
+</header>
+<main>
+  <div class="section cat-ops">
+    <div class="section-header"><div class="section-icon">📋</div><span class="section-title">營運 &amp; 工作清單</span><span class="section-count">1</span></div>
+    <div class="file-list">
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/11b_-V8koi1WurWDdWxmtsRUtmMDtxczm/edit?gid=1820259566#gid=1820259566" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">大人牛乳 工作清單 202604</span><span class="file-arrow">↗</span></a>
+    </div>
+  </div>
+  <div class="section cat-mkt">
+    <div class="section-header"><div class="section-icon">📱</div><span class="section-title">行銷 &amp; 社群</span><span class="section-count">3</span></div>
+    <div class="file-list">
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/1dalBHUOm8B2eKDwJA2dVXqn90KWFdFuu/edit?gid=534258173#gid=534258173" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">4月社群內容日曆</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/1pZFwhxWxXL-aFUXLbS87vRjYwfkp9EOu/edit?gid=104360385#gid=104360385" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">4月發文日曆</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/1FtFOwSLdfM3KTEfuwAYPC3IXVAf_aCsMUa9D9qowcyQ/edit?gid=237058770#gid=237058770" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">廣告素材表</span><span class="file-arrow">↗</span></a>
+    </div>
+  </div>
+  <div class="section" style="border-color:#ece9e4;">
+    <div class="section-header"><div class="section-icon" style="background:#fef9c3;">💬</div><span class="section-title">客服</span><span class="section-count">1</span></div>
+    <div class="file-list">
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/1Ao6M_2EZRhWx9uqxDC4gNOywKf7_7xD2xxiRd6Wsqd0/edit?gid=129418493#gid=129418493" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">LINE 自動回覆</span><span class="file-arrow">↗</span></a>
+    </div>
+  </div>
+  <div class="section cat-event">
+    <div class="section-header"><div class="section-icon">🎪</div><span class="section-title">巨城快閃 7/1</span><span class="section-count">3</span></div>
+    <div class="file-list">
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/1-loY9XAWgdVW_w5jD-e6TMj04jiTQqAS/edit?gid=1754493340#gid=1754493340" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">巨城快閃社群內容日曆</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/1bzuVCyocO_Gl-DO7vioOi8bcWAqgFolT/edit?gid=1835620372#gid=1835620372" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">巨城快閃 KOC / KOL 執行表</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/document/d/1HH3DFImN7wwJ2g2uyX_5_FLp9hQmvPS_oF8SBomxG0c/edit" target="_blank"><span class="file-type type-doc">文件</span><span class="file-name">給 KOL 的 Reels 腳本參考</span><span class="file-arrow">↗</span></a>
+    </div>
+  </div>
+  <div class="section cat-biz">
+    <div class="section-header"><div class="section-icon">🤝</div><span class="section-title">業務 &amp; 通路</span><span class="section-count">2</span></div>
+    <div class="file-list">
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/1tDtTEsL5u1fcPu_a99kxEADNxsjhn5ug/edit?gid=826008681#gid=826008681" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">台北新北業務夥伴名單</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/16YrN5jfyyU9gscIesy-O5Ec5TLGyDxwGOhg45h_N_f0/edit?gid=406649975#gid=406649975" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">咖啡牛乳團購組合建議</span><span class="file-arrow">↗</span></a>
+    </div>
+  </div>
+  <div class="section cat-fin">
+    <div class="section-header"><div class="section-icon">💰</div><span class="section-title">財務</span><span class="section-count">2</span></div>
+    <div class="file-list">
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/16qYCIO00aQAHc5m4DooTOr_yPHl1-V4PVTIQYXHq3X0/edit?gid=407050706#gid=407050706" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">財務預估與戰略規劃</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/1APgrlPo75UkmPLM9rjnPi0WEVC55gQVouDQRd1n6Mr8/edit?gid=0#gid=0" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">損益統計</span><span class="file-arrow">↗</span></a>
+    </div>
+  </div>
+  <div class="section cat-brand">
+    <div class="section-header"><div class="section-icon">📚</div><span class="section-title">品牌知識庫 &amp; 策略</span><span class="section-count">6</span></div>
+    <div class="file-list">
+      <a class="file-row" href="https://docs.google.com/document/d/1XZh5ffo2_zYgeCPROHkhRWIPbI-Du9wXiS2B21_hPyw/edit?tab=t.0" target="_blank"><span class="file-type type-doc">文件</span><span class="file-name">品牌核心知識庫</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/document/d/1ZNNx-ueQwvd03i5FvFp7BnQBIetNqJBD9xtoGUbldb0/edit?tab=t.0" target="_blank"><span class="file-type type-doc">文件</span><span class="file-name">品牌策略與市場總監</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/document/d/1a4Iy7Sb00TTQ5wHPCVc-D5reOe_HP2oHCEucw_ag1is/edit?tab=t.0" target="_blank"><span class="file-type type-doc">文件</span><span class="file-name">數據分析與策略顧問</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/document/d/1XP4YIucXfl9xh1gr7baGbjwV4novR9THO5A2eiSWFng/edit?tab=t.0" target="_blank"><span class="file-type type-doc">文件</span><span class="file-name">供應鏈與庫存管理</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/document/d/1kd7lgITchXDNvKQc-jwdksyVEsbeIgudc6mYd1Nx49Q/edit?tab=t.0" target="_blank"><span class="file-type type-doc">文件</span><span class="file-name">虛擬財務長與成本控管</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/document/d/1zmTEA7-RuOM7JREBATUtf7rX-FnP9wpHiTKkfPTLgpo/edit?tab=t.0" target="_blank"><span class="file-type type-doc">文件</span><span class="file-name">行銷與內容企劃資料庫</span><span class="file-arrow">↗</span></a>
+    </div>
+  </div>
+  <div class="section cat-auto">
+    <div class="section-header"><div class="section-icon">🤖</div><span class="section-title">自動化（心皓）</span><span class="section-count">1</span></div>
+    <div class="file-list">
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/1SSIIaGbU6hhV19atoXE8L8pxQyy7nJjd/edit?gid=1864594298#gid=1864594298" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">自動化盤點報告 20260401</span><span class="file-arrow">↗</span></a>
+    </div>
+  </div>
+  <div class="section" style="border-color:#ece9e4;">
+    <div class="section-header"><div class="section-icon" style="background:#f3e8ff;">🌐</div><span class="section-title">官網</span><span class="section-count">1</span></div>
+    <div class="file-list">
+      <a class="file-row" href="https://coffeemilk.tw/pages/test" target="_blank"><span class="file-type" style="background:#f3e8ff;color:#7c3aed;font-size:10px;font-weight:600;padding:2px 6px;border-radius:5px;letter-spacing:.04em;flex-shrink:0;width:32px;text-align:center;">網頁</span><span class="file-name">官網 mockup</span><span class="file-arrow">↗</span></a>
+    </div>
+  </div>
+  <div class="section" style="border-color:#ece9e4;">
+    <div class="section-header"><div class="section-icon" style="background:#f1f5f9;">📁</div><span class="section-title">其他</span><span class="section-count">2</span></div>
+    <div class="file-list">
+      <a class="file-row" href="https://docs.google.com/spreadsheets/d/1p0gEfmcse47BoQGjcggO1ktmQ8XWAGcufY__NA8oqpc/edit?gid=46873087#gid=46873087" target="_blank"><span class="file-type type-sheet">表格</span><span class="file-name">大人牛乳（主試算表）</span><span class="file-arrow">↗</span></a>
+      <a class="file-row" href="https://docs.google.com/document/d/1g_J2vRDvJOnuoTDu2K9v0kddJBhhbA_4OQQTaFcOgJQ/edit?tab=t.0" target="_blank"><span class="file-type type-doc">文件</span><span class="file-name">商業計畫書</span><span class="file-arrow">↗</span></a>
+    </div>
+  </div>
+</main>
+<footer>大人牛乳 Daren Coffee Milk &nbsp;·&nbsp; coffeemilk.tw</footer>
+</body>
+</html>
