@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大人牛乳 2026 Q2–Q3 行銷計畫</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* 1. CORE VARIABLES & SETUP (Strict Grayscale/Monochrome Palette) */
+        :root {
+            --bg-body: #e5e7eb;
+            --slide-bg: #ffffff;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --black: #000000;
+            --border-light: #e5e5e5;
+            --border-dark: #999999;
+            --accent-bg: #f8f8f8;
+            --chart-gray: #d1d5db;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-body);
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr;
+            padding: 30px 0;
+            place-items: center;
+            font-family: 'Noto Sans TC', sans-serif;
+            color: var(--text-primary);
+        }
+
+        p { margin-bottom: 15px; }
+
+        /* 2. SLIDE CONTAINER */
+        .slide-container {
+            align-items: flex-start;
+            background-color: var(--slide-bg);
+            border-top: 12px solid var(--black);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 720px;
+            justify-content: flex-start;
+            overflow: hidden;
+            padding: 80px 60px 60px 60px;
+            position: relative;
+            width: 1280px;
+        }
+
+        .header-tracker {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            position: absolute;
+            top: 30px;
+            left: 60px;
+            border-bottom: 2px solid var(--black);
+            padding-bottom: 4px;
+        }
+
+        /* 3. TYPOGRAPHY */
+        .slide-container h1, .slide-container h2, .slide-container h3 { color: var(--black); font-weight: 700; margin: 0; }
+        .slide-container h1 { font-size: 60px; line-height: 1.2; }
+        .slide-container .slide-title { font-size: 40px; margin-bottom: 35px; width: 100%; text-align: left;}
+        .slide-container h3 { font-size: 26px; margin-bottom: 15px; }
+        .slide-container p, .slide-container li, .slide-container td { font-size: 18px; line-height: 1.6; color: var(--text-primary); }
+
+        .content-area { display: flex; flex-direction: column; flex-grow: 1; width: 100%; }
+
+        .consulting-list { list-style-type: square; padding-left: 20px; margin-bottom: 20px; }
+        .consulting-list li { margin-bottom: 12px; }
+        .consulting-list strong { color: var(--black); }
+
+        /* 4. SPECIFIC LAYOUTS */
+        
+        .title-slide { justify-content: center; align-items: center; text-align: center; padding: 60px; border-top: none; background: radial-gradient(circle, #ffffff 0%, #f0f0f0 100%);}
+        .title-slide .title-accent-line { width: 80px; height: 6px; background-color: var(--black); margin: 0 auto 30px auto; }
+        .title-slide h1 { margin-bottom: 20px; letter-spacing: 2px; }
+        .title-slide .subtitle { font-size: 24px; color: var(--text-secondary); font-weight: 500; }
+        .title-slide .date-stamp { margin-top: 60px; font-size: 16px; color: var(--border-dark); font-weight: 700; letter-spacing: 1px; }
+
+        .agenda-list { list-style: none; width: 85%; margin: 0 auto; }
+        .agenda-list li { font-size: 22px; padding: 14px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; }
+        .agenda-list li strong { font-size: 28px; font-weight: 900; color: var(--black); margin-right: 25px; width: 40px; }
+
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; width: 100%; align-items: stretch; height: 100%; }
+        .three-column { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; width: 100%; align-items: stretch; height: 100%; }
+        
+        /* 2x2 Grid for Audiences */
+        .audience-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 30px; width: 100%; height: 100%; }
+        .audience-card { background-color: var(--accent-bg); padding: 30px; border-top: 4px solid var(--black); display: flex; flex-direction: column; }
+        .audience-header { display: flex; align-items: baseline; margin-bottom: 15px; }
+        .audience-letter { font-size: 48px; font-weight: 900; color: var(--border-dark); line-height: 1; margin-right: 15px; }
+        .audience-card h3 { font-size: 22px; margin: 0; }
+        .audience-quote { margin-top: auto; font-size: 20px; font-weight: 700; font-style: italic; border-left: 4px solid var(--black); padding-left: 15px; color: var(--black); }
+
+        .column-card { background-color: var(--accent-bg); padding: 40px; border-left: 8px solid var(--black); display: flex; flex-direction: column; justify-content: center;}
+        .badge { display: inline-block; background-color: var(--black); color: #fff; padding: 6px 16px; font-size: 14px; font-weight: 700; margin-bottom: 25px; align-self: flex-start; letter-spacing: 1px; }
+
+        /* Tiled Content (3 Tiles) */
+        .tiled-content { display: flex; gap: 30px; width: 100%; align-items: stretch; justify-content: center; height: 100%; padding-bottom: 20px;}
+        .tile { flex: 1; background-color: var(--accent-bg); border-top: 6px solid var(--black); padding: 40px 30px; display: flex; flex-direction: column; }
+        .tile .icon { font-size: 40px; color: var(--black); margin-bottom: 25px; }
+        .tile h3 { font-size: 24px; margin-bottom: 20px; }
+
+        /* Script Example Cards */
+        .script-card { background-color: #fff; border: 2px solid var(--black); padding: 25px; margin-bottom: 25px; position: relative; }
+        .script-card::before { content: '\f03d'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: 20px; top: 20px; color: var(--border-light); font-size: 30px; }
+        .script-tag { display: inline-block; background-color: var(--black); color: #fff; font-size: 14px; font-weight: 700; padding: 4px 12px; margin-bottom: 15px; }
+        .script-text { font-size: 20px; font-weight: 500; font-style: italic; color: var(--black); margin-bottom: 15px; line-height: 1.5; }
+        .script-logic { font-size: 16px; color: var(--text-secondary); border-top: 1px dashed var(--border-dark); padding-top: 15px; }
+
+        /* Category List for Matrix */
+        .category-list { list-style: none; padding: 0; margin-top: 15px; }
+        .category-list li { margin-bottom: 15px; font-size: 16px; line-height: 1.4; }
+        .category-list strong { font-size: 18px; color: var(--black); display: block; margin-bottom: 2px;}
+
+        /* Simplified Tier Setup (Strategy 3) */
+        .tier-container { display: flex; flex-direction: column; gap: 40px; width: 100%; }
+        .tier-box { background-color: var(--accent-bg); padding: 35px 50px; border-left: 6px solid var(--black); }
+        .tier-box h3 { font-size: 28px; margin-bottom: 20px; border-bottom: 2px solid var(--border-light); padding-bottom: 15px; }
+        .tier-row { display: flex; align-items: center; margin-bottom: 15px; font-size: 22px; font-weight: 500; }
+        .tier-row:last-child { margin-bottom: 0; }
+        .tier-threshold { flex: 0 0 350px; color: var(--text-secondary); }
+        .tier-arrow { margin: 0 30px; color: var(--border-dark); }
+        .tier-reward { font-weight: 900; color: var(--black); font-size: 24px; }
+        .tier-tag { font-size: 16px; background: var(--border-light); padding: 4px 10px; margin-left: 20px; color: var(--text-secondary); font-weight: 400;}
+
+        /* Timeline / WBS list */
+        .timeline-list { list-style: none; position: relative; padding-left: 0; }
+        .timeline-list::before { content: ''; position: absolute; left: 7px; top: 10px; bottom: 10px; width: 2px; background-color: var(--border-light); }
+        .timeline-list li { position: relative; padding-left: 35px; margin-bottom: 30px; }
+        .timeline-list li::before { content: ''; position: absolute; left: 0; top: 6px; width: 16px; height: 16px; border-radius: 50%; background-color: var(--black); }
+        .timeline-list .date { font-weight: 700; font-size: 20px; color: var(--black); margin-bottom: 5px; }
+        .timeline-list .task { font-size: 18px; color: var(--text-primary); }
+
+        .image-wrapper { width: 100%; height: 100%; overflow: hidden; border: 1px solid var(--border-light);}
+        .image-wrapper img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); }
+
+        .qa-layout { text-align: center; width: 100%; align-self: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; }
+        .qa-layout h2 { font-size: 64px; margin-bottom: 20px; letter-spacing: 2px; }
+        .qa-layout p { font-size: 28px; color: var(--black); font-weight: 700; margin-bottom: 20px;}
+        .qa-layout .sub-text { font-size: 20px; color: var(--text-secondary); font-weight: 400; }
+        .qa-layout .contact-info { margin-top: 50px; font-weight: 700; border-top: 2px solid var(--black); padding-top: 20px; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Title Slide -->
+<div class="slide-container title-slide" id="slide1">
+    <div class="title-layout">
+        <div class="title-accent-line"></div>
+        <h1>大人牛乳 2026 Q2–Q3<br>行銷計畫</h1>
+        <p class="subtitle">0 廣告預算：短影音曝光 × KOC 團購轉換 × 限時搭售</p>
+        <p class="date-stamp">CONFIDENTIAL & PROPRIETARY</p>
+    </div>
+</div>
+
+<!-- Slide 2: Agenda -->
+<div class="slide-container" id="slide2">
+    <div class="header-tracker">AGENDA</div>
+    <h2 class="slide-title">簡報大綱</h2>
+    <div class="content-area">
+        <ul class="agenda-list">
+            <li><strong>01</strong> 目標受眾分析：30-55 歲女性輪廓</li>
+            <li><strong>02</strong> 行銷計劃：曝光、轉換與客單佈局</li>
+            <li><strong>03</strong> 計劃一｜短影音建立認知反差</li>
+            <li><strong>04</strong> 計劃二｜KOC 團購體系建立與賦能</li>
+            <li><strong>05</strong> 計劃三｜限時贈品搭售</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Slide 3: Target Audience -->
+<div class="slide-container" id="slide3">
+    <div class="header-tracker">TARGET AUDIENCE</div>
+    <h2 class="slide-title">目標受眾分析：30–55 歲女性輪廓</h2>
+    <div class="content-area">
+        <div class="audience-grid">
+            <div class="audience-card">
+                <div class="audience-header">
+                    <div class="audience-letter">A</div>
+                    <h3>自我投資女子 (30–35歲)</h3>
+                </div>
+                <p>都會單身或新婚，高度追蹤選物店與獨立品牌。購物不只是買產品，更是買品味與個人主張的展現。</p>
+                <div class="audience-quote">「我在變成想成為的女人」</div>
+            </div>
+            <div class="audience-card">
+                <div class="audience-header">
+                    <div class="audience-letter">B</div>
+                    <h3>忙碌媽媽 (32–42歲)</h3>
+                </div>
+                <p>育有 1–2 孩，日常時間被嚴重切碎。極度渴望微小的喘息空間，需要能讓她們「短暫逃離、回到自己」的體驗。</p>
+                <div class="audience-quote">「這 15 分鐘是我的」</div>
+            </div>
+            <div class="audience-card">
+                <div class="audience-header">
+                    <div class="audience-letter">C</div>
+                    <h3>熟齡質感派 (40–50歲)</h3>
+                </div>
+                <p>事業穩定，具備高消費力。極度重視生活儀式感、產品背後的故事感，以及送禮時所彰顯的個人品味。</p>
+                <div class="audience-quote">「我選的東西就是我」</div>
+            </div>
+            <div class="audience-card">
+                <div class="audience-header">
+                    <div class="audience-letter">D</div>
+                    <h3>小旅行者 (30–50歲)</h3>
+                </div>
+                <p>多為北部客群，偶爾來宜蘭微度假。追求旅途中的 highlight，行程要有可打卡的精緻感與話題故事性。</p>
+                <div class="audience-quote">「旅途中的放空片刻」</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: 3 Pillars (Tiled Content) -->
+<div class="slide-container" id="slide4">
+    <div class="header-tracker">CORE MARKETING STRATEGY</div>
+    <h2 class="slide-title">業績增長方式</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                <h3>一：曝光手段<br>自製短影音矩陣</h3>
+                <p>不依賴廣告投放，以密集發佈爭取平台演算法曝光。涵蓋 15 種品牌/產品主題，腳本核心定調為<strong>「建立認知反差」</strong>，打破大眾既定印象，藉此極大化被分享的機率。</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                <h3>二：轉換手段<br>KOC 團購通路</h3>
+                <p>將內容聲量直接變現。經營 KOC 作為主要銷售推手，提供豐厚利潤分享、高品質推廣素材與優勢價格，讓團購主「好賣」，藉此建立討論度並獲取大量新客。</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                <h3>三：營收推升<br>限時贈品搭售</h3>
+                <p>不盲目打折，針對 5/1 與 7/1 兩大事件點，以「高價值贈品（達克瓦茲、萃取液、免運）」設計階梯式門檻，誘發消費者湊單心理，有效墊高結帳客單價。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Strategy 1 - Short Video Scripts -->
+<div class="slide-container" id="slide5">
+    <div class="header-tracker">STRATEGY 01 : EXPOSURE</div>
+    <h2 class="slide-title">短影音曝光：以「認知反差」創造分享動機</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <p style="margin-bottom: 25px;">自製短影音是我們獲取免費流量的唯一武器。所有的內容設計，都必須建立在「顛覆常理」的觀察上，唯有創造資訊落差，觀眾才會願意分享給朋友。</p>
+                <ul class="consulting-list">
+                    <li><strong>固定開場：</strong>統一以「我發現...」作為 Hook，快速吸引受眾注意力。</li>
+                    <li><strong>反差手法：</strong>穿插與大眾認知不同的觀察（成分陷阱、價格迷思、業界秘辛）。</li>
+                    <li><strong>目的：</strong>建立品牌「專家感」與「純粹無添加」的高級定位。</li>
+                </ul>
+            </div>
+            <div>
+                <!-- Script 1 -->
+                <div class="script-card">
+                    <div class="script-tag">腳本案例 A｜成分陷阱反差</div>
+                    <p class="script-text">「<strong>我發現</strong>，市面上很多主打『鮮奶咖啡』的熱銷產品，翻開背面成分表，其實根本沒有加一滴鮮奶，全是調和乳跟奶精...」</p>
+                    <p class="script-logic"><strong>【策略解析】</strong>打破大眾對坊間產品的信任盲區，順勢帶出大人牛乳堅持 100% 純粹成分的品牌價值。</p>
+                </div>
+                <!-- Script 2 -->
+                <div class="script-card">
+                    <div class="script-tag">腳本案例 B｜價格價值反差</div>
+                    <p class="script-text">「<strong>我發現</strong>，大家寧願花 200 元買一杯只適合拍照、喝兩口就膩的網美飲料，卻覺得 150 元、花 8 小時真材實料萃取的牛乳太貴...」</p>
+                    <p class="script-logic"><strong>【策略解析】</strong>點破消費者的價格雙標盲點，將定價與「職人耗時萃取」的隱性成本綁定，建立平價奢華感。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6: Strategy 1 - Content Matrix (15 Categories) -->
+<div class="slide-container" id="slide6">
+    <div class="header-tracker">STRATEGY 01 : CONTENT MATRIX</div>
+    <h2 class="slide-title">100 集短影音矩陣：15 大腳本分類與溝通目標</h2>
+    <div class="content-area">
+        <p style="margin-bottom: 25px;">將 100 集腳本依據行銷漏斗分為三大溝通主軸，精準打擊不同階段的消費者痛點，建構完整的品牌護城河。</p>
+        <div class="three-column">
+            <!-- Column 1 -->
+            <div class="column-card" style="justify-content: flex-start; padding: 30px;">
+                <div class="badge">主軸一｜建立信任與產品力</div>
+                <ul class="category-list">
+                    <li><strong>A. 成分真相</strong> <span style="color: var(--text-secondary);">揭露添加物與業界話術</span></li>
+                    <li><strong>E. 原料產地</strong> <span style="color: var(--text-secondary);">溯源台灣生乳與精品豆</span></li>
+                    <li><strong>D. 喝的體驗</strong> <span style="color: var(--text-secondary);">教育層次、餘韻等感官差異</span></li>
+                    <li><strong>H. 健康身體</strong> <span style="color: var(--text-secondary);">破除咖啡因與健康迷思</span></li>
+                    <li><strong>K. 使用搭配</strong> <span style="color: var(--text-secondary);">搭餐、加熱等生活場景應用</span></li>
+                </ul>
+            </div>
+            <!-- Column 2 -->
+            <div class="column-card" style="justify-content: flex-start; padding: 30px;">
+                <div class="badge">主軸二｜市場教育與轉換引導</div>
+                <ul class="category-list">
+                    <li><strong>J. 比較錯覺</strong> <span style="color: var(--text-secondary);">釐清與拿鐵、調味乳之差異</span></li>
+                    <li><strong>B. 價格品質</strong> <span style="color: var(--text-secondary);">拆解成本邏輯，支撐高定價</span></li>
+                    <li><strong>L. 消費者教育</strong> <span style="color: var(--text-secondary);">破除試喝陷阱與甜度誤會</span></li>
+                    <li><strong>F. 購買判斷</strong> <span style="color: var(--text-secondary);">提供「如何挑選」的具體指南</span></li>
+                    <li><strong>O. 新竹巨城</strong> <span style="color: var(--text-secondary);">針對快閃專案的在地化溝通</span></li>
+                </ul>
+            </div>
+            <!-- Column 3 -->
+            <div class="column-card" style="justify-content: flex-start; padding: 30px;">
+                <div class="badge">主軸三｜品牌情感與生活認同</div>
+                <ul class="category-list">
+                    <li><strong>C. 日式哲學</strong> <span style="color: var(--text-secondary);">昭和文化與堅持的職人精神</span></li>
+                    <li><strong>I. 品牌故事</strong> <span style="color: var(--text-secondary);">創業心路歷程與價值觀</span></li>
+                    <li><strong>M. 地緣礁溪</strong> <span style="color: var(--text-secondary);">連結宜蘭在地水質與環境</span></li>
+                    <li><strong>G. 生活儀式</strong> <span style="color: var(--text-secondary);">連結特定身份認同與週末感</span></li>
+                    <li><strong>N. 品味進階</strong> <span style="color: var(--text-secondary);">針對 VIP 熟客的咖啡品鑑教育</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: Strategy 2 - KOC Group Buying -->
+<div class="slide-container" id="slide7">
+    <div class="header-tracker">STRATEGY 02 : CONVERSION</div>
+    <h2 class="slide-title">KOC 團購通路經營與轉換</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <h3>建構分潤與賦能雙贏體系</h3>
+                <p>經營 KOC 團購通路是獲取新客與快速變現的核心手段。要讓團購主「好推、好賣」，品牌必須提供絕對的彈藥支援：</p>
+                <ul class="consulting-list" style="margin-top:20px;">
+                    <li><strong>利潤共享機制：</strong>建立健康的抽成結構，把傳統投放廣告的預算，轉為發放給 KOC 的分潤，確保推廣意願。</li>
+                    <li><strong>頂級素材賦能：</strong>主動提供現成的高質感短影音、圖文懶人包，降低 KOC 的內容產出成本。</li>
+                    <li><strong>專屬優勢價格：</strong>確保團購價格的市場稀缺性，讓受眾產生「跟著他買最划算」的信任轉化。</li>
+                </ul>
+            </div>
+            <div>
+                <div class="image-wrapper"><img src="http://googleusercontent.com/image_collection/image_retrieval/12093557989938781711" alt="People looking at mobile phone"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 8: Strategy 3 - AOV/GWP (Simplified) -->
+<div class="slide-container" id="slide8">
+    <div class="header-tracker">STRATEGY 03 : AVERAGE ORDER VALUE</div>
+    <h2 class="slide-title">限時贈品搭售：雙引爆點做高客單價</h2>
+    <div class="content-area">
+        <p style="margin-bottom: 30px;">利用實體與線上門檻的差異化設計，引導消費者為了獲取高價值贈品而主動湊單。</p>
+        
+        <div class="tier-container">
+            <!-- Event 1 Tiers -->
+            <div class="tier-box">
+                <h3>5/1 冰淇淋上市 <span style="font-size:16px; font-weight:normal; color:var(--text-secondary); margin-left:10px;">(藉新品創造實體排隊與線上囤貨)</span></h3>
+                <div class="tier-row">
+                    <span class="tier-threshold">門市滿 $300 / 線上滿 $500</span>
+                    <i class="fa-solid fa-arrow-right tier-arrow"></i>
+                    <span class="tier-reward">贈 達克瓦茲 1 顆</span>
+                    <span class="tier-tag">拉高基本單價</span>
+                </div>
+                <div class="tier-row" style="margin-top: 15px; border-top: 1px dashed var(--border-dark); padding-top: 15px;">
+                    <span class="tier-threshold">門市滿 $500 / 線上滿 $800</span>
+                    <i class="fa-solid fa-arrow-right tier-arrow"></i>
+                    <span class="tier-reward">再送 萃取液 1 包</span>
+                    <span class="tier-tag">刺激極端大單</span>
+                </div>
+            </div>
+
+            <!-- Event 2 Tiers -->
+            <div class="tier-box">
+                <h3>7/1 新竹巨城開幕 <span style="font-size:16px; font-weight:normal; color:var(--text-secondary); margin-left:10px;">(解決提貨痛點，將實體流量導回線上)</span></h3>
+                <div class="tier-row">
+                    <span class="tier-threshold">快閃櫃滿 $1,000 / 線上滿 $2,000</span>
+                    <i class="fa-solid fa-arrow-right tier-arrow"></i>
+                    <span class="tier-reward">享 全省免運寄送</span>
+                    <span class="tier-tag">解除大宗購買阻力</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- Slide 11: Q&A / Conclusion -->
+<div class="slide-container" id="slide11">
+    <div class="qa-layout">
+        <h2>0 廣告預算，達成全網觸及</h2>
+        <p>短影音演算法曝光 ＋ KOC 團購分潤裂變</p>
+        <div class="sub-text">以「自製優質內容」與「讓利推廣」取代傳統廣告費，將內容觸及做廣，極大化品牌線上影響力。</div>
+        <div class="contact-info">
+            Q&A AND NEXT STEPS
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
