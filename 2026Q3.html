@@ -88,7 +88,7 @@
         .title-slide .date-stamp { margin-top: 60px; font-size: 16px; color: var(--border-dark); font-weight: 700; letter-spacing: 1px; }
 
         .agenda-list { list-style: none; width: 85%; margin: 0 auto; }
-        .agenda-list li { font-size: 22px; padding: 14px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; }
+        .agenda-list li { font-size: 22px; padding: 12px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; }
         .agenda-list li strong { font-size: 28px; font-weight: 900; color: var(--black); margin-right: 25px; width: 40px; }
 
         .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; width: 100%; align-items: stretch; height: 100%; }
@@ -150,6 +150,12 @@
         .qa-layout p { font-size: 28px; color: var(--black); font-weight: 700; margin-bottom: 20px;}
         .qa-layout .sub-text { font-size: 20px; color: var(--text-secondary); font-weight: 400; }
         .qa-layout .contact-info { margin-top: 50px; font-weight: 700; border-top: 2px solid var(--black); padding-top: 20px; letter-spacing: 1px; }
+
+        .table-layout { width: 100%; }
+        .table-layout table { border-collapse: collapse; width: 100%; border-top: 2px solid var(--black); border-bottom: 2px solid var(--black); }
+        .table-layout th, .table-layout td { border-bottom: 1px solid var(--border-light); padding: 18px 24px; text-align: left; }
+        .table-layout th { background-color: var(--accent-bg); color: var(--black); font-size: 20px; font-weight: 700; }
+        .table-layout tr:last-child td { border-bottom: none; }
     </style>
 </head>
 <body>
@@ -176,8 +182,9 @@
             <li><strong>04</strong> 戰略一｜短影音矩陣：15 大腳本分類</li>
             <li><strong>05</strong> 戰略二｜KOC 團購體系建立與賦能</li>
             <li><strong>06</strong> 戰略二｜KOC 分潤結構與試跑成果洞察</li>
-            <li><strong>07</strong> 戰略三｜雙引爆點限時贈品搭售</li>
-            <li><strong>08</strong> WBS 執行拆解：兩大專案進度表</li>
+            <li><strong>07</strong> 戰略二｜單品經濟學與財務毛利試算</li>
+            <li><strong>08</strong> 戰略三｜雙引爆點限時贈品搭售</li>
+            <li><strong>09</strong> WBS 執行拆解：冰淇淋上市與巨城開幕</li>
         </ul>
     </div>
 </div>
@@ -463,8 +470,73 @@
     </div>
 </div>
 
-<!-- Slide 10: Strategy 3 - AOV/GWP (Simplified) -->
+<!-- Slide 10: Strategy 2 - Profit Analysis -->
 <div class="slide-container" id="slide10">
+    <div class="header-tracker">STRATEGY 02 : PROFITABILITY ANALYSIS</div>
+    <h2 class="slide-title">財務試算：單品經濟學與毛利結構</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <div style="border: none; padding: 0; text-align: left; margin-bottom: 10px;">
+                    <div style="font-size: 110px; font-weight: 900; color: var(--black); line-height: 1;">53.7%</div>
+                    <div style="font-size: 24px; font-weight: 700; margin-top: 15px; color: var(--black);">首檔試跑淨毛利率</div>
+                    <div style="font-size: 16px; color: var(--text-secondary); margin-top: 5px; font-weight: 500;">* 已扣除製造成本與 3% KOC 基本分潤</div>
+                </div>
+                <div style="margin-top: 30px;">
+                    <ul class="consulting-list">
+                        <li><strong>高單價即高毛利：</strong>威士忌冰淇淋單件淨毛利額最高，為利潤火車頭，後續素材應強力主打。</li>
+                        <li><strong>讓利空間深厚：</strong>利潤結構極度健康，即使未來將 KOC 佣金拉高至 8% (大使級+創作獎金)，整體常態毛利率仍穩佔 45% 以上。</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 20px;">常態單件售出利潤結構</h3>
+                <div class="table-layout">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>核心品項</th>
+                                <th>團購價</th>
+                                <th>製造成本</th>
+                                <th>單件淨毛利 <span style="font-size:14px; font-weight:normal; color:var(--text-secondary);">(扣3%)</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>咖啡牛乳</strong></td>
+                                <td>$105</td>
+                                <td>$45</td>
+                                <td><strong>$56.8</strong> <span style="color:var(--text-secondary); font-size:16px;">(54%)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>達克瓦茲</strong></td>
+                                <td>$95</td>
+                                <td>$45</td>
+                                <td><strong>$47.1</strong> <span style="color:var(--text-secondary); font-size:16px;">(49%)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>經典冰淇淋</strong></td>
+                                <td>$95</td>
+                                <td>$33</td>
+                                <td><strong>$59.1</strong> <span style="color:var(--text-secondary); font-size:16px;">(62%)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>威士忌冰淇淋</strong></td>
+                                <td>$115</td>
+                                <td>$48</td>
+                                <td><strong>$63.5</strong> <span style="color:var(--text-secondary); font-size:16px;">(55%)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size: 15px; color: var(--text-secondary); margin-top: 20px; line-height: 1.5;">* 極端情境壓力測試：當消費者為了優惠湊滿「買10送1」或「買6送1」，加入免費贈品成本後，整組綜合淨毛利率仍能維持在 41% ~ 49% 的健康水位，不傷筋骨。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 11: Strategy 3 - AOV/GWP (Simplified) -->
+<div class="slide-container" id="slide11">
     <div class="header-tracker">STRATEGY 03 : AVERAGE ORDER VALUE</div>
     <h2 class="slide-title">限時贈品搭售：雙引爆點做高客單價</h2>
     <div class="content-area">
@@ -503,8 +575,8 @@
     </div>
 </div>
 
-<!-- Slide 11: WBS 1 (Timeline) -->
-<div class="slide-container" id="slide11">
+<!-- Slide 12: WBS 1 (Timeline) -->
+<div class="slide-container" id="slide12">
     <div class="header-tracker">EXECUTION WBS 01</div>
     <h2 class="slide-title">專案執行：5/1 冰淇淋上市 WBS</h2>
     <div class="content-area">
@@ -538,14 +610,14 @@
                 </ul>
             </div>
             <div>
-                <div class="image-wrapper"><img src="http://googleusercontent.com/image_collection/image_retrieval/13470074123013131543" alt="Minimalist retail and cafe environment"></div>
+                <div class="image-wrapper"><img src="http://googleusercontent.com/image_collection/image_retrieval/13470074123013131543" alt="[大人牛乳實體店面意象]"></div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Slide 12: WBS 2 (Timeline) -->
-<div class="slide-container" id="slide12">
+<!-- Slide 13: WBS 2 (Timeline) -->
+<div class="slide-container" id="slide13">
     <div class="header-tracker">EXECUTION WBS 02</div>
     <h2 class="slide-title">專案執行：7/1 新竹巨城開幕 WBS</h2>
     <div class="content-area">
@@ -579,14 +651,14 @@
                 </ul>
             </div>
             <div>
-                <div class="image-wrapper"><img src="http://googleusercontent.com/image_collection/image_retrieval/4182132493960978704" alt="Black and white modern pop-up store"></div>
+                <div class="image-wrapper"><img src="http://googleusercontent.com/image_collection/image_retrieval/4182132493960978704" alt="[大人牛乳黑白現代快閃店意象]"></div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Slide 13: Q&A / Conclusion -->
-<div class="slide-container" id="slide13">
+<!-- Slide 14: Q&A / Conclusion -->
+<div class="slide-container" id="slide14">
     <div class="qa-layout">
         <h2>0 廣告預算，達成全網觸及</h2>
         <p>短影音演算法曝光 ＋ KOC 團購分潤裂變</p>
